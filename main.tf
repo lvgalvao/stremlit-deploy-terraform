@@ -64,7 +64,7 @@ resource "aws_instance" "web" {
               sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
               sudo chmod +x /usr/local/bin/docker-compose
               sudo yum install -y git
-              git clone https://github.com/seu-usuario/seu-repositorio.git /home/ec2-user/app
+              git clone https://github.com/lvgalvao/stremlit-deploy-terraform /home/ec2-user/app
               cd /home/ec2-user/app
               sudo docker build -t streamlit-app .
               sudo docker run -d -p 80:80 streamlit-app
